@@ -1,0 +1,45 @@
+# Node.js modules
+node_modules/
+npm-debug.log
+yarn-debug.log*
+yarn-error.log*
+.pnpm-store/
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Sensitive files (CRITICAL: DO NOT COMMIT THESE)
+*.key
+*.pem
+*.pfx
+*.jks
+*.cer
+*.crt
+*.p12
+# Specific to your project:
+meditrack-vision-ai-meditrack-vision-ai-dc916eed2de9.json # Your service account key
+
+# Frontend specific (Create React App builds and cache)
+/frontend/build
+/frontend/.cache
+/frontend/coverage
+/frontend/src/**/*.test.js.snap
+
+# Backend specific (uploads folder, logs)
+/backend/uploads/ # Temporary file uploads
+/backend/logs/ # If you ever add a logs directory
+
+# IDE and OS specific files
+.vscode/        # VSCode settings (optional, you might want to share some)
+.idea/          # IntelliJ IDEA files
+.DS_Store       # macOS files
+Thumbs.db       # Windows thumbnail cache
+ehthumbs.db
+.directory      # Linux directory customization
+*.log           # Any log files
+*.tmp           # Temporary files
+*.swp           # Vim swap files

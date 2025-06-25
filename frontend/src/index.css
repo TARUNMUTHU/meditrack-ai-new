@@ -1,0 +1,126 @@
+/* frontend/src/index.css */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+/* Basic Reset & Global Font */
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(135deg, #e0f2f7 0%, #d4eaf5 100%); /* Soft light blue gradient background */
+  color: #2c3e50; /* Darker text for readability */
+  min-height: 100vh; /* Ensure body takes full height */
+  display: flex;
+  flex-direction: column;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* General Button Styles - Vibrant with subtle gradients */
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 10px; /* Slightly more rounded */
+  font-weight: 600;
+  padding: 12px 25px;
+  font-size: 1.05em;
+  color: white;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  background-size: 200% auto; /* For gradient animation */
+}
+
+/* Primary Button (e.g., Login, Analyze) */
+button[type="submit"],
+.primary-button {
+  background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%); /* Purple to blue gradient */
+}
+
+button[type="submit"]:hover:not(:disabled),
+.primary-button:hover:not(:disabled) {
+  background-position: right center; /* Move gradient on hover */
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Secondary Button (e.g., Sign Up, Logout) */
+.secondary-button {
+  background-image: linear-gradient(to right, #007bff 0%, #00c6ff 100%); /* Blue to light blue gradient */
+}
+
+.secondary-button:hover:not(:disabled) {
+  background-position: right center;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Danger Button (e.g., Logout if red is desired) */
+.danger-button {
+  background-image: linear-gradient(to right, #dc3545 0%, #ff6961 100%); /* Red to light red gradient */
+}
+
+.danger-button:hover:not(:disabled) {
+  background-position: right center;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+}
+
+/* General Input Styles */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="file"] {
+  padding: 14px 18px; /* More padding */
+  border: 1px solid #cce7f0; /* Lighter, subtle border */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 1.05em;
+  color: #333;
+  background-color: #f8fcff; /* Slightly off-white background */
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+  outline: none;
+  border-color: #6a11cb; /* Primary gradient start color on focus */
+  box-shadow: 0 0 0 4px rgba(106, 17, 203, 0.2); /* Soft focus ring */
+}
+
+/* Custom file input wrapper for attractive file selection */
+.file-input-wrapper {
+  display: inline-block;
+  padding: 12px 25px;
+  background-image: linear-gradient(to right, #00c6ff 0%, #007bff 100%); /* Blue gradient for file button */
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-size: 200% auto;
+}
+
+.file-input-wrapper:hover {
+  background-position: right center;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.file-input-wrapper input[type="file"] {
+  display: none; /* Hide default file input */
+}
